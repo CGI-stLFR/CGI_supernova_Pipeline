@@ -1,0 +1,17 @@
+samples:
+    lib_id: ""
+    fq_path: "../fastq"
+    lanes: []
+params:
+    barcode: "/barcode.list"
+    barcode_RC: "/barcode_RC.list"
+    read_len: 100
+    toolsdir: "/research/rv-02/home/eanderson/CGI_WGS_Pipeline/Data_and_Tools"
+    min_reads: 10
+    supernova_whitelist: "/home/eanderson/supernova4stLFR/supernova-cs/2.1.1/tenkit/lib/python/tenkit/barcodes/4M-with-alts-february-2016.txt"
+    convert_reads_script: "/research/rv-02/home/qmao/Scripts/convert_stLFR_fq_to_10X/transfer_modified_v3.pl"
+    supernova_install: "/home/eanderson/supernova4stLFR/supernova"
+    max_reads: 2100000000
+    max_mem: 288
+threads:
+    supernova: 100
