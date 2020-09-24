@@ -1,17 +1,31 @@
 samples:
+    # sample/library name
     lib_id: ""
+    # path to fastqs
     fq_path: "../fastq"
+    # lanes in the fastqs directory to include
     lanes: []
 params:
+    # barcode list
     barcode: "/barcode.list"
+    # reverse complemented barcode list
     barcode_RC: "/barcode_RC.list"
+    # read length, modify appropriately
     read_len: 100
+    # directory with tools to be used, probably won't need to be changed
     toolsdir: "/research/rv-02/home/eanderson/CGI_WGS_Pipeline/Data_and_Tools"
+    # min read pairs to keep a barcode
     min_reads: 10
+    # supernova whitelist, BGI extended it to include 4M reads supernova will accept
     supernova_whitelist: "/home/eanderson/supernova4stLFR/supernova-cs/2.1.1/tenkit/lib/python/tenkit/barcodes/4M-with-alts-february-2016.txt"
+    # read conversion script
     convert_reads_script: "/research/rv-02/home/qmao/Scripts/convert_stLFR_fq_to_10X/transfer_modified_v3.pl"
+    # install dir of supernova
     supernova_install: "/home/eanderson/supernova4stLFR/supernova"
+    # supernova max reads param, change if there's too high of coverage
     max_reads: 2100000000
+    # max mem for supernova, should be fine
     max_mem: 288
 threads:
+    # how many threads for supernova to use
     supernova: 100
